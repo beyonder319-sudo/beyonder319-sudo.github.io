@@ -132,7 +132,7 @@ function calc(){
   const cuft = l*w*(d/12);
   const cuyd = cuft/27;
   // bags per cubic foot: 80lb=0.0222, 60lb=0.0296, 50lb=0.0355, 40lb=0.0444
-  const perCuFt = {80:0.0222,60:0.0296,50:0.0355,40:0.0444}[size];
+  const perCuFt = {80:1.667,60:2.222,50:2.667,40:3.333}[size];
   const bags = Math.ceil(cuft*perCuFt*1.1);
   const r = document.getElementById('result');
   document.getElementById('r_bags').textContent = bags.toLocaleString();
